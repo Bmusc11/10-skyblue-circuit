@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Skyblue Circuit, Yarrabilba — Auction 18 June 2026</title>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1704307830252372');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1704307830252372&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: #f4f4f2;
+      color: #1a1a1a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Safe area ── */
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+    /* ── Sticky nav ── */
+    #topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: transparent;
+      transition: background 0.25s ease, box-shadow 0.25s ease;
+    }
+    #topnav.scrolled {
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+    }
+    #topnav.scrolled .nav-rw-text { color: #1a1a1a; }
+    #topnav.scrolled .nav-auction { color: #595959; }
+    .nav-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 8px; }
+    .rw-dot {
+      width: 30px; height: 30px;
+      background: #ffe512;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .rw-dot span {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700; font-size: 8px;
+      letter-spacing: -0.02em; color: #000; line-height: 1;
+    }
+    .nav-rw-text {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 13px;
+      color: #fff; letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+    }
+    .nav-auction {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.03em;
+      transition: color 0.25s ease;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      background-image: url('brand_assets/WEB10SkyblueCttYarrabilba-32.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.2) 40%,
+        rgba(0,0,0,0.75) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 0 20px 0;
+    }
+
+    /* ── Property card (pulls up from hero) ── */
+    .property-card {
+      background: #fff;
+      border-radius: 20px 20px 0 0;
+      padding: 28px 24px 0;
+      margin-top: 24px;
+      position: relative; z-index: 3;
+    }
+
+    /* ── Address block ── */
+    .address-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #ffe512; margin-bottom: 6px;
+    }
+    .address-h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(36px, 9vw, 56px);
+      font-weight: 700; color: #fff;
+      line-height: 1.05; letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+    .address-tagline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(15px, 3.5vw, 20px);
+      font-style: italic; font-weight: 400;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+    }
+
+    /* ── Spec row ── */
+    .spec-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .spec-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(8px);
+      border-radius: 100px;
+      padding: 7px 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; color: #fff;
+    }
+
+    /* ── Auction strip ── */
+    .auction-strip {
+      display: flex; align-items: center; gap: 10px;
+      background: #ffe512;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 0;
+    }
+    .auction-strip-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: #000;
+    }
+
+    /* ── Card sections ── */
+    .page-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 16px 120px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 12px;
+    }
+    .card-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #999; margin-bottom: 10px;
+    }
+    .card-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(22px, 5vw, 28px);
+      font-weight: 700; color: #1a1a1a;
+      letter-spacing: -0.02em; line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .card-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px; color: #595959;
+      line-height: 1.75;
+    }
+    .card-body p + p { margin-top: 14px; }
+
+    /* ── Stats grid ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .stat-cell {
+      text-align: center;
+      padding: 18px 8px;
+      border-right: 1px solid rgba(0,0,0,0.07);
+    }
+    .stat-cell:last-child { border-right: none; }
+    .stat-num {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px; font-weight: 700;
+      color: #1a1a1a; letter-spacing: -0.02em; line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-lbl {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px; font-weight: 600;
+      color: #999; text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── Feature tags ── */
+    .feature-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .feature-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #f4f4f2;
+      border-radius: 100px;
+      padding: 8px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 500; color: #1a1a1a;
+    }
+    .feature-tag::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: #ffe512;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Gallery carousel ── */
+    .gallery-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin: 0 -24px;
+      padding: 0 24px;
+    }
+    .gallery-scroll::-webkit-scrollbar { display: none; }
+    .gallery-slide {
+      flex-shrink: 0;
+      width: 78vw;
+      max-width: 360px;
+      scroll-snap-align: start;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .gallery-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+    .gallery-count {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; color: #999; font-weight: 500;
+      margin-top: 12px; text-align: right;
+    }
+
+    /* ── Distance list ── */
+    .distance-row {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .distance-row:last-child { border-bottom: none; }
+    .distance-name {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 500; color: #1a1a1a;
+    }
+    .distance-name::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #ffe512; border-radius: 50%; flex-shrink: 0;
+    }
+    .distance-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; font-weight: 600; color: #999;
+      white-space: nowrap; margin-left: 12px;
+    }
+
+    /* ── Map ── */
+    .map-wrap {
+      border-radius: 12px; overflow: hidden;
+      margin-top: 20px;
+    }
+
+    /* ── Agent card ── */
+    .agent-row {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px;
+    }
+    .agent-photo {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      border: 2.5px solid #ffe512;
+      object-fit: cover; flex-shrink: 0;
+      object-position: 86% 16%;
+    }
+    .agent-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 19px; font-weight: 700; color: #1a1a1a;
+      letter-spacing: -0.01em;
+    }
+    .agent-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px; color: #999; margin-top: 2px;
+    }
+    .agent-brand {
+      display: flex; align-items: center; gap: 5px;
+      margin-top: 5px;
+    }
+    .agent-brand-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; font-weight: 600;
+      color: #595959; letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .contact-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; font-weight: 500; color: #1a1a1a;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .contact-link:last-child { border-bottom: none; }
+    .contact-link svg { color: #999; flex-shrink: 0; }
+
+    /* ── CTA card ── */
+    .cta-card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 12px;
+    }
+    .cta-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #ffe512;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: #000;
+      margin-bottom: 18px;
+    }
+    .cta-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px; font-weight: 700;
+      color: #fff; letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 10px;
+    }
+    .cta-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px; color: rgba(255,255,255,0.55);
+      line-height: 1.65; margin-bottom: 24px;
+    }
+
+    /* ── Countdown ── */
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .cd-unit {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 14px 8px 12px;
+      text-align: center;
+    }
+    .cd-num {
+      display: block;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px; font-weight: 700;
+      color: #fff; line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .cd-lbl {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 9px; font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-top: 5px;
+    }
+
+    /* ── Buttons ── */
+    .btn-yellow {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      background: #ffe512; color: #000;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700; font-size: 15px;
+      padding: 17px 20px;
+      border-radius: 10px; border: none;
+      text-decoration: none; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.15s ease;
+    }
+    .btn-yellow:active { opacity: 0.85; }
+
+    .btn-outline-white {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      background: transparent; color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 15px;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      text-decoration: none; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.15s ease;
+      margin-top: 10px;
+    }
+    .btn-outline-white:active { background: rgba(255,255,255,0.08); }
+
+    /* ── Footer ── */
+    footer {
+      background: #e8e8e6;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding: 24px 20px;
+      padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+    }
+    .footer-inner {
+      max-width: 680px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .footer-brand {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .footer-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px; color: #888;
+    }
+    .footer-disclaimer {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px; color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* ── Sticky bottom bar ── */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 80;
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,0.09);
+      padding: 12px 16px;
+      padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
+    }
+    .sticky-bar-inner {
+      display: flex; gap: 10px;
+      max-width: 680px; margin: 0 auto;
+    }
+    .sticky-btn-primary {
+      flex: 2;
+      display: flex; align-items: center; justify-content: center;
+      background: #ffe512; color: #000;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700; font-size: 14px;
+      padding: 14px 16px;
+      border-radius: 10px; text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .sticky-btn-secondary {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      background: #f4f4f2; color: #1a1a1a;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 14px;
+      padding: 14px 12px;
+      border-radius: 10px; text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── Desktop max-width wrapper ── */
+    @media (min-width: 700px) {
+      .page-body { padding: 0 24px 120px; }
+      .card { padding: 36px 32px; }
+      .cta-card { padding: 36px 32px; }
+      .gallery-slide { width: 46%; max-width: 320px; }
+      .stats-grid { }
+      .stat-num { font-size: 30px; }
+      .stat-lbl { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     STICKY TOP NAV
+══════════════════════════════════ -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="rw-dot"><span>RW</span></div>
+      <span class="nav-rw-text">Ray White</span>
+    </div>
+    <span class="nav-auction">10 Skyblue Circuit</span>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-content">
+
+    <div style="padding: 0 24px;">
+      <p class="address-eyebrow">Yarrabilba · QLD 4207</p>
+      <h1 class="address-h1">10 Skyblue<br>Circuit</h1>
+      <p class="address-tagline">A modern, spacious family home<br>that must be sold.</p>
+
+      <!-- Spec chips -->
+      <div class="spec-row">
+        <div class="spec-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          4 Bed
+        </div>
+        <div class="spec-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/></svg>
+          2 Bath
+        </div>
+        <div class="spec-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16,8 20,8 23,11 23,16 16,16 16,8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          2 Car
+        </div>
+        <div class="spec-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+          576m²
+        </div>
+      </div>
+    </div>
+
+    <!-- Auction label + Countdown in hero -->
+    <div style="padding: 0 24px; margin-bottom: 12px;">
+      <div style="background:#ffe512; border-radius:10px; padding:14px 18px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#000;">Auction · In Room</span>
+        </div>
+        <div style="font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;color:#000;line-height:1.2;">18 June 2026 · 6:00 PM</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#000;">2/74 Kedron Brook Rd, Wilston QLD</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#000;">Auctioneer: Perry Edmondson-Clark</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:8px; margin-bottom: 20px; padding: 0 24px;">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-days-hero">--</span>
+        <span class="cd-lbl">Days</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-hours-hero">--</span>
+        <span class="cd-lbl">Hours</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-mins-hero">--</span>
+        <span class="cd-lbl">Mins</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-secs-hero">--</span>
+        <span class="cd-lbl">Secs</span>
+      </div>
+    </div>
+
+    <!-- Pull-up card -->
+    <div class="property-card">
+      <div class="auction-strip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span class="auction-strip-text">Auction In Room · 18 June 2026 · 6:00 PM · 2/74 Kedron Brook Rd, Wilston QLD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PAGE BODY
+══════════════════════════════════ -->
+<div class="page-body">
+
+  <!-- ── About ── -->
+  <div class="card" style="border-radius: 0 0 16px 16px; margin-top: 0; padding-top: 24px;">
+    <p class="card-label">About the property</p>
+    <h2 class="card-heading">The sellers are motivated. This one must be sold.</h2>
+    <div class="card-body">
+      <p>The sellers are highly motivated and have made it clear — this property needs to be sold by auction day. Prior offers are encouraged. If you have been looking at Yarrabilba, stop looking and start acting.</p>
+      <p>Some homes look good before you even walk through the door. The clean modern front, the timber entry and the neat, well-kept street appeal tell you straight away how this home has been looked after. Step inside and the scale of the place hits you. This is not your standard Yarrabilba build. The rooms are generous, the proportions are right and there is room to breathe in every direction.</p>
+      <p>The open-plan kitchen, living and dining room is the social heart of the home and it is genuinely large — mocha cabinetry, stone benchtops, a stainless rangehood and a breakfast bar that pulls people in. A separate lounge and media room gives the household a proper second space to retreat to at the end of the day.</p>
+      <p>Outside, the alfresco at over five and a half metres wide is fan-cooled, fully tiled and flows straight to a generous lawn wrapped in tropical gardens. Once you are out here, you will not want to come back inside.</p>
+    </div>
+  </div>
+
+  <!-- ── Features ── -->
+  <div class="card">
+    <p class="card-label">Property features</p>
+
+    <div class="stats-grid" style="margin-bottom: 20px;">
+      <div class="stat-cell">
+        <span class="stat-num">4</span>
+        <span class="stat-lbl">Beds</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">2</span>
+        <span class="stat-lbl">Baths</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">2</span>
+        <span class="stat-lbl">Garage</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" style="font-size: 18px;">576m²</span>
+        <span class="stat-lbl">Block</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num" style="font-size: 18px;">5.6m</span>
+        <span class="stat-lbl">Alfresco</span>
+      </div>
+    </div>
+
+    <div class="feature-tags">
+      <span class="feature-tag">Open-plan kitchen, living &amp; dining</span>
+      <span class="feature-tag">Separate lounge &amp; media room</span>
+      <span class="feature-tag">Stone benchtops &amp; mocha cabinetry</span>
+      <span class="feature-tag">Breakfast bar</span>
+      <span class="feature-tag">Master ensuite — double shower &amp; vanity</span>
+      <span class="feature-tag">Deep soaking bath</span>
+      <span class="feature-tag">Ducted air conditioning</span>
+      <span class="feature-tag">Ceiling fans throughout</span>
+      <span class="feature-tag">Double gate side access</span>
+      <span class="feature-tag">Tropical gardens &amp; lawn</span>
+      <span class="feature-tag">Laundry with external access</span>
+    </div>
+  </div>
+
+  <!-- ── Gallery ── -->
+  <div class="card">
+    <p class="card-label">Photo gallery</p>
+    <h2 class="card-heading" style="margin-bottom: 20px;">Walk through the home</h2>
+
+    <div class="gallery-scroll" id="gallery">
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/62d2-H3514455-201848084__1779079753-96255-WEB10SkyblueCttYarrabilba-1.jpg?maxwidth=900&quality=82&format=jpg" alt="Front of home" loading="lazy"></div>
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/2131-H3514455-201848196__1779079772-96181-WEB10SkyblueCttYarrabilba-10.jpg?maxwidth=900&quality=82&format=jpg" alt="Living area" loading="lazy"></div>
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/b8f4-H3514455-201848223__1779079779-354060-WEB10SkyblueCttYarrabilba-13.jpg?maxwidth=900&quality=82&format=jpg" alt="Kitchen" loading="lazy"></div>
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/cf1e-H3514455-201848179__1779079767-84041-WEB10SkyblueCttYarrabilba-8.jpg?maxwidth=900&quality=82&format=jpg" alt="Master bedroom" loading="lazy"></div>
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/2775-H3514455-201848409__1779079830-96753-WEB10SkyblueCttYarrabilba-32.jpg?maxwidth=900&quality=82&format=jpg" alt="Alfresco" loading="lazy"></div>
+      <div class="gallery-slide"><img src="https://cdn6.ep.dynamics.net/s3/rw-propertyimages/5f7a-H3514455-201848395__1779079826-96471-WEB10SkyblueCttYarrabilba-30.jpg?maxwidth=900&quality=82&format=jpg" alt="Backyard" loading="lazy"></div>
+    </div>
+    <p class="gallery-count">Swipe to explore · <span id="gallery-count">1</span> / 6</p>
+  </div>
+
+  <!-- ── Location ── -->
+  <div class="card">
+    <p class="card-label">Location</p>
+    <h2 class="card-heading" style="margin-bottom: 6px;">What's nearby?</h2>
+    <p class="card-body" style="margin-bottom: 20px;">Yarrabilba is one of Queensland's fastest-growing master-planned communities. More space. Newer infrastructure. A neighbourhood families are proud to call home.</p>
+
+    <div>
+      <div class="distance-row">
+        <span class="distance-name">St Clare's Primary &amp; Kindergarten</span>
+        <span class="distance-time">1 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">Cafe 63 &amp; Yarrabilba Coffee Hub</span>
+        <span class="distance-time">2–3 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">Yarrabilba Central (Coles, Medical)</span>
+        <span class="distance-time">3 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">Yarrabilba State Schools (Prep–Yr 12)</span>
+        <span class="distance-time">3 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">San Damiano College</span>
+        <span class="distance-time">4 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">Darlington Parklands Super Park</span>
+        <span class="distance-time">4 min</span>
+      </div>
+      <div class="distance-row">
+        <span class="distance-name">The Yarrabilba Hotel</span>
+        <span class="distance-time">4 min</span>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=10+Skyblue+Circuit+Yarrabilba+QLD+4207&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="280"
+        style="border:0; display:block;"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map: 10 Skyblue Circuit, Yarrabilba">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- ── Agent ── -->
+  <div class="card">
+    <p class="card-label">Your agent</p>
+    <div class="agent-row">
+      <img src="brand_assets/brenden-musca.jpg" alt="Brenden Musca" class="agent-photo">
+      <div>
+        <div class="agent-name">Brenden Musca</div>
+        <div class="agent-title">Sales Agent</div>
+        <div class="agent-brand">
+          <div class="rw-dot" style="width: 22px; height: 22px;"><span style="font-size: 6px;">RW</span></div>
+          <span class="agent-brand-text">Ray White Surfers Paradise</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="tel:+61400167594" class="contact-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.52 5.52l.91-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+      0400 167 594
+    </a>
+    <a href="mailto:brenden.musca@raywhite.com" class="contact-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      brenden.musca@raywhite.com
+    </a>
+    <a href="https://maps.google.com/?q=Level+2,+50+Cavill+Ave,+Surfers+Paradise+QLD+4217" target="_blank" rel="noopener" class="contact-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Level 2, 50 Cavill Ave, Surfers Paradise
+    </a>
+  </div>
+
+  <!-- ── CTA card ── -->
+  <div class="cta-card">
+    <div style="margin-bottom:18px;">
+      <div class="cta-badge" style="margin-bottom:8px;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Auction · In Room · 18 June 2026 · 6:00 PM
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <div style="display:flex;align-items:center;gap:6px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.5);">2/74 Kedron Brook Rd, Wilston QLD</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span style="font-family:'DM Sans',sans-serif;font-size:12px;color:rgba(255,255,255,0.5);">Auctioneer: Perry Edmondson-Clark</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="cta-heading">Ready to make your move?</h2>
+    <p class="cta-sub">The vendors are motivated and prior offers are welcome. Register online or call Brenden directly to arrange a private inspection.</p>
+
+    <div class="countdown" id="countdown-wrap">
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-days">--</span>
+        <span class="cd-lbl">Days</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-hours">--</span>
+        <span class="cd-lbl">Hours</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-mins">--</span>
+        <span class="cd-lbl">Mins</span>
+      </div>
+      <div class="cd-unit">
+        <span class="cd-num" id="cd-secs">--</span>
+        <span class="cd-lbl">Secs</span>
+      </div>
+    </div>
+
+    <a href="https://raywhitesurfersparadise.com.au/properties/residential-for-sale/qld/yarrabilba-4207/house/3514455" target="_blank" rel="noopener" class="btn-yellow">
+      View the full listing
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+    </a>
+    <a href="tel:+61400167594" class="btn-outline-white">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.52 5.52l.91-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+      Call Brenden — 0400 167 594
+    </a>
+  </div>
+
+</div><!-- end .page-body -->
+
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="rw-dot" style="width: 24px; height: 24px;"><span style="font-size: 6.5px;">RW</span></div>
+      <span class="footer-text">Ray White Surfers Paradise · Level 2, 50 Cavill Ave, Surfers Paradise QLD 4217</span>
+    </div>
+    <p class="footer-disclaimer">In preparing this information, best endeavours were used to ensure accuracy, but no responsibility is accepted for errors or omissions. Interested parties should make their own enquiries.</p>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════
+     STICKY BOTTOM BAR
+══════════════════════════════════ -->
+<div class="sticky-bar">
+  <div class="sticky-bar-inner">
+    <a href="https://raywhitesurfersparadise.com.au/properties/residential-for-sale/qld/yarrabilba-4207/house/3514455" target="_blank" rel="noopener" class="sticky-btn-primary">
+      View full listing
+    </a>
+    <a href="tel:+61400167594" class="sticky-btn-secondary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.52 5.52l.91-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+</div>
+
+
+<script>
+  // ── Nav scroll behaviour ──
+  const nav = document.getElementById('topnav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── Countdown ──
+  (function () {
+    const auctionTime = new Date('2026-06-18T08:00:00Z'); // 6pm AEST
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      const diff = auctionTime - new Date();
+      if (diff <= 0) {
+        document.getElementById('countdown-wrap').innerHTML =
+          '<p style="color:#fff;font-family:\'DM Sans\',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Auction day is here</p>';
+        return;
+      }
+      const d = pad(Math.floor(diff / 86400000));
+      const h = pad(Math.floor((diff % 86400000) / 3600000));
+      const m = pad(Math.floor((diff % 3600000) / 60000));
+      const s = pad(Math.floor((diff % 60000) / 1000));
+      document.getElementById('cd-days').textContent  = d;
+      document.getElementById('cd-hours').textContent = h;
+      document.getElementById('cd-mins').textContent  = m;
+      document.getElementById('cd-secs').textContent  = s;
+      document.getElementById('cd-days-hero').textContent  = d;
+      document.getElementById('cd-hours-hero').textContent = h;
+      document.getElementById('cd-mins-hero').textContent  = m;
+      document.getElementById('cd-secs-hero').textContent  = s;
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // ── Gallery scroll counter ──
+  (function () {
+    const gallery = document.getElementById('gallery');
+    const counter = document.getElementById('gallery-count');
+    gallery.addEventListener('scroll', () => {
+      const slides = gallery.querySelectorAll('.gallery-slide');
+      const slideWidth = slides[0].offsetWidth + 10;
+      const idx = Math.round(gallery.scrollLeft / slideWidth) + 1;
+      counter.textContent = Math.min(idx, slides.length);
+    }, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
