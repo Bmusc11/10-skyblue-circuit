@@ -495,7 +495,7 @@
       max-width: 680px; margin: 0 auto;
     }
     .sticky-btn-primary {
-      flex: 2;
+      flex: 1;
       display: flex; align-items: center; justify-content: center;
       background: #ffe512; color: #000;
       font-family: 'DM Sans', sans-serif;
@@ -503,171 +503,19 @@
       padding: 14px 16px;
       border-radius: 10px; text-decoration: none;
       -webkit-tap-highlight-color: transparent;
+      text-align: center;
     }
     .sticky-btn-secondary {
       flex: 1;
       display: flex; align-items: center; justify-content: center; gap: 6px;
       background: #f4f4f2; color: #1a1a1a;
       font-family: 'DM Sans', sans-serif;
-      font-weight: 600; font-size: 14px;
+      font-weight: 600; font-size: 12px;
       padding: 14px 12px;
       border-radius: 10px; text-decoration: none;
       -webkit-tap-highlight-color: transparent;
-    }
-
-    /* ── Lead Gate ── */
-    #lead-gate {
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: rgba(10, 10, 10, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: opacity 0.35s ease;
-    }
-    #lead-gate-modal {
-      background: #fff;
-      border-radius: 20px;
-      padding: 32px 28px 28px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
-    }
-    .gate-logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .gate-progress-track {
-      height: 3px;
-      background: #f0f0f0;
-      border-radius: 2px;
-      margin-bottom: 28px;
-    }
-    .gate-progress-fill {
-      height: 100%;
-      background: #ffe512;
-      border-radius: 2px;
-      transition: width 0.4s ease;
-    }
-    .gate-step { transition: opacity 0.2s ease; }
-    .gate-step.hidden { display: none; }
-    .gate-step-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #bbb;
-      margin-bottom: 8px;
-    }
-    .gate-heading {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(20px, 5vw, 26px);
-      font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
-      margin-bottom: 20px;
-    }
-    .gate-field {
-      width: 100%;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: #1a1a1a;
-      background: #f4f4f2;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      padding: 16px 18px;
-      outline: none;
-      display: block;
-      transition: border-color 0.15s ease, background 0.15s ease;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    .gate-field:focus {
-      border-color: #ffe512;
-      background: #fff;
-    }
-    .gate-field::placeholder { color: #c0c0c0; }
-    .gate-field.error { border-color: #e53935; }
-    .gate-options {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .gate-option {
-      width: 100%;
-      text-align: left;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: #1a1a1a;
-      background: #f4f4f2;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      padding: 14px 16px;
-      cursor: pointer;
-      transition: border-color 0.15s ease, background 0.15s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .gate-option:hover, .gate-option:focus {
-      border-color: #ffe512;
-      background: #fffde7;
-      outline: none;
-    }
-    .gate-actions {
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .gate-btn {
-      width: 100%;
-      background: #ffe512;
-      color: #000;
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      padding: 17px 20px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: opacity 0.15s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .gate-btn:active { opacity: 0.85; }
-    .gate-back {
-      background: none;
-      border: none;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 500;
-      color: #aaa;
-      cursor: pointer;
-      padding: 6px;
       text-align: center;
-      -webkit-tap-highlight-color: transparent;
-      transition: color 0.15s ease;
-    }
-    .gate-back:hover { color: #555; }
-    .gate-disclaimer {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      color: #ccc;
-      text-align: center;
-      margin-top: 16px;
-      line-height: 1.5;
+      line-height: 1.3;
     }
 
     /* ── Desktop max-width wrapper ── */
@@ -978,6 +826,10 @@
       View the full listing
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
     </a>
+    <a href="https://buy.realtair.com/properties/258687" target="_blank" rel="noopener" class="btn-outline-white">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+      Property &amp; Auction Documents
+    </a>
     <a href="tel:+61400167594" class="btn-outline-white">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.52 5.52l.91-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
       Call Brenden — 0400 167 594
@@ -1009,71 +861,10 @@
     <a href="https://raywhitesurfersparadise.com.au/properties/residential-for-sale/qld/yarrabilba-4207/house/3514455" target="_blank" rel="noopener" class="sticky-btn-primary">
       View full listing
     </a>
-    <a href="tel:+61400167594" class="sticky-btn-secondary">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.36 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.52 5.52l.91-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-      Call
+    <a href="https://buy.realtair.com/properties/258687" target="_blank" rel="noopener" class="sticky-btn-secondary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Property &amp; Auction Documents
     </a>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════
-     LEAD GATE OVERLAY
-══════════════════════════════════ -->
-<div id="lead-gate">
-  <div id="lead-gate-modal">
-
-    <div class="gate-logo">
-      <div class="rw-dot"><span>RW</span></div>
-      <span style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.05em;text-transform:uppercase;color:#1a1a1a;">Ray White</span>
-    </div>
-
-    <div class="gate-progress-track">
-      <div class="gate-progress-fill" id="gate-progress-fill"></div>
-    </div>
-
-    <!-- Step 1: Name -->
-    <div class="gate-step" id="gate-step-0">
-      <p class="gate-step-label">Step 1 of 4</p>
-      <h2 class="gate-heading">What's your name?</h2>
-      <input class="gate-field" type="text" id="gate-name" placeholder="Your full name" autocomplete="name">
-    </div>
-
-    <!-- Step 2: Phone -->
-    <div class="gate-step hidden" id="gate-step-1">
-      <p class="gate-step-label">Step 2 of 4</p>
-      <h2 class="gate-heading">What's your phone number?</h2>
-      <input class="gate-field" type="tel" id="gate-phone" placeholder="Mobile number" autocomplete="tel">
-    </div>
-
-    <!-- Step 3: Email -->
-    <div class="gate-step hidden" id="gate-step-2">
-      <p class="gate-step-label">Step 3 of 4</p>
-      <h2 class="gate-heading">And your email address?</h2>
-      <input class="gate-field" type="email" id="gate-email" placeholder="Email address" autocomplete="email">
-    </div>
-
-    <!-- Step 4: Situation -->
-    <div class="gate-step hidden" id="gate-step-3">
-      <p class="gate-step-label">Step 4 of 4</p>
-      <h2 class="gate-heading">What best describes<br>your situation?</h2>
-      <div class="gate-options">
-        <button class="gate-option" data-value="Just browsing">Just browsing</button>
-        <button class="gate-option" data-value="Looking for a home to live in">Looking for a home to live in</button>
-        <button class="gate-option" data-value="Looking for an investment">Looking for an investment</button>
-        <button class="gate-option" data-value="I am thinking of selling and doing market research">I am thinking of selling and doing market research</button>
-      </div>
-    </div>
-
-    <div class="gate-actions" id="gate-actions">
-      <button class="gate-btn" id="gate-next">
-        Continue
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
-      </button>
-      <button class="gate-back" id="gate-back" style="display:none">← Back</button>
-    </div>
-
-    <p class="gate-disclaimer">Your information is private and will only be used to contact you about this property.</p>
   </div>
 </div>
 
@@ -1125,114 +916,6 @@
     }, { passive: true });
   })();
 
-  // ── Lead Gate ──
-  (function () {
-    var gate = document.getElementById('lead-gate');
-    var currentStep = 0;
-    var formData = {};
-    var TOTAL = 4;
-
-    function updateProgress() {
-      document.getElementById('gate-progress-fill').style.width = ((currentStep + 1) / TOTAL * 100) + '%';
-    }
-
-    function updateActions() {
-      var nextBtn = document.getElementById('gate-next');
-      var backBtn = document.getElementById('gate-back');
-      nextBtn.style.display = currentStep === 3 ? 'none' : 'flex';
-      backBtn.style.display = currentStep === 0 ? 'none' : 'block';
-    }
-
-    function goToStep(next) {
-      var curEl = document.getElementById('gate-step-' + currentStep);
-      curEl.style.opacity = '0';
-      setTimeout(function () {
-        curEl.classList.add('hidden');
-        curEl.style.opacity = '';
-        var nextEl = document.getElementById('gate-step-' + next);
-        nextEl.classList.remove('hidden');
-        nextEl.style.opacity = '0';
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () { nextEl.style.opacity = '1'; });
-        });
-        currentStep = next;
-        updateProgress();
-        updateActions();
-        var input = nextEl.querySelector('input');
-        if (input) setTimeout(function () { input.focus(); }, 100);
-      }, 180);
-    }
-
-    function dismissGate() {
-      gate.style.opacity = '0';
-      setTimeout(function () { gate.style.display = 'none'; }, 350);
-    }
-
-    function submitLead() {
-      // Google Apps Script — writes to Sheet + sends email notification
-      fetch('https://script.google.com/macros/s/AKfycbynW4yoPl9baHarUwYgYoHd7X_qNZreX4agftNrPi3x_ITWi7NMViDi04lP5lrN4D9LgQ/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(formData),
-      });
-
-      // Meta Pixel
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', {
-          content_name: '10 Skyblue Circuit, Yarrabilba',
-          content_category: formData.situation,
-        });
-      }
-
-      dismissGate();
-    }
-
-    function advance() {
-      var ids  = ['gate-name', 'gate-phone', 'gate-email'];
-      var keys = ['name', 'phone', 'email'];
-      if (currentStep < 3) {
-        var field = document.getElementById(ids[currentStep]);
-        if (!field.value.trim()) {
-          field.classList.add('error');
-          field.focus();
-          return;
-        }
-        field.classList.remove('error');
-        formData[keys[currentStep]] = field.value.trim();
-        goToStep(currentStep + 1);
-      }
-    }
-
-    document.getElementById('gate-next').addEventListener('click', advance);
-
-    document.getElementById('gate-back').addEventListener('click', function () {
-      if (currentStep > 0) goToStep(currentStep - 1);
-    });
-
-    document.querySelectorAll('.gate-option').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        formData.situation = this.getAttribute('data-value');
-        submitLead();
-      });
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' && currentStep < 3) advance();
-    });
-
-    ['gate-name', 'gate-phone', 'gate-email'].forEach(function (id) {
-      document.getElementById(id).addEventListener('input', function () {
-        this.classList.remove('error');
-      });
-    });
-
-    updateProgress();
-    updateActions();
-    setTimeout(function () {
-      var f = document.getElementById('gate-name');
-      if (f) f.focus();
-    }, 300);
-  })();
 </script>
 
 </body>
